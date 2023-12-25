@@ -29,7 +29,7 @@ async function run() {
     const alltaskCollection = client.db("Task").collection("task");
 
        // get user to Display
-       app.get('/users', async(req,res)=>{
+       app.get('/task', async(req,res)=>{
         console.log(req.headers);
         const result=await alltaskCollection.find().toArray();
         res.send(result);
